@@ -1,8 +1,9 @@
 {
-  "name": "blog",
+  "name": "grahamballantyne.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "serve": "npm run build -- --serve"
@@ -11,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "prettier": "^3.1.1"
   }
 }
