@@ -12,7 +12,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0-alpha.4",
+    "eslint": "^8.56.0",
+    "eslint-config-unobtrusive": "^1.2.5",
     "prettier": "^3.1.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^3.1.8",
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.10",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "sass": "^1.69.7",
+    "uuid": "^9.0.1"
   }
 }
