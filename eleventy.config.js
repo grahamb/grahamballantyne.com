@@ -89,7 +89,8 @@ async function image(
   altOrOptions,
   isFirst = false,
   photoCredit = false,
-  width = 768
+  width = 768,
+  float = false
 ) {
   const src = path.join(
     naiveSrc[0] === '/'
@@ -115,12 +116,6 @@ async function image(
     outputDir,
     ...sharpOptions,
   });
-  const linkedImage = await Image(src, {
-    widths: ['auto'],
-    formats: ['webp'],
-    outputDir,
-    ...sharpOptions,
-  });
 
   const pictureElement = EleventyImg.generateHTML(metadata, {
     sizes: 'auto',
@@ -129,11 +124,9 @@ async function image(
     ...htmlOptions,
   });
 
-  return `<div class="image-container"><a href="${
-    linkedImage.webp[0].url
-  }" class="image" target="_blank" style="max-width:${
-    metadata.webp[0].width
-  }px">${pictureElement}</a>${
+  const className = `image-container ${float || ''}`;
+
+  return `<div class="${className}">${pictureElement}</a>${
     photoCredit ? '<span>Image Credit: ' + photoCredit + '</span>' : ''
   }</div>`;
 }

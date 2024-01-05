@@ -274,6 +274,14 @@ video {
   border: 8px solid var(--fg-color);
 }
 
+.image-container.left {
+  float: left;
+  margin-right: 1em;
+}
+
+.image-container.right {
+  float: right;
+  margin-left: 1em;
 }
 
 .image-container a.image {
