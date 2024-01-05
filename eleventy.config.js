@@ -158,7 +158,7 @@ async function bannerImage(post, isFirst = false) {
     loading: isFirst ? 'eager' : 'lazy',
     decode: 'async',
   });
-  return `<a href="${post.url}" class="image image-container">${pictureElement}</a>`;
+  return `<div class="image image-container"><a href="${post.url}">${pictureElement}</a></div>`;
 }
 
 // Copied from https://github.com/markdown-it/markdown-it-footnote/blob/fe6c169c72b9f4d6656b10aa449128456f5a990e/index.mjs#L17C1-L23C2
