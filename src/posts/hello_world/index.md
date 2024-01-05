@@ -6,10 +6,9 @@ tags:
   - meta
   - navel-gazing
 banner_image:
-  src: IMG_0109.jpg
   alt: My grey tabby cat Argo wrapped up in a blue blanket. Only his head is visible.
 images: 
-  IMG_0109.jpg:
+  IMG_0109-16x9.jpg:
     q: 85
     alt: My grey tabby cat Argo wrapped up in a blue blanket. Only his head is visible.
 ---
@@ -18,4 +17,4 @@ Hello. Welcome to my new blog site. I've never been very good at putting words o
 
 Who knows. For now, thanks for reading. In the mantime, here's a picture of my cat Argo, because it's the internet.
 
-{% image "IMG_0109.jpg" images %}
+{% image "IMG_0109-16x9.jpg" images %}
