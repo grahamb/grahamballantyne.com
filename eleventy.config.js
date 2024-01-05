@@ -3,7 +3,6 @@ import * as htmlmin from 'html-minifier';
 import MarkdownIt from 'markdown-it';
 import MarkdownItFootnote from 'markdown-it-footnote';
 import * as path from 'path';
-import * as sass from 'sass';
 import { getBannerImageSrc, getSharpOptions } from './utils.js';
 
 const mdLib = MarkdownIt({
@@ -16,12 +15,6 @@ const mdLib = MarkdownIt({
 mdLib.renderer.rules.footnote_caption = renderFootnoteCaption;
 
 export default (c) => {
-  c.addFilter('css', function (value) {
-    return sass.compileString(value, {
-      style: 'compressed',
-    }).css;
-  });
-
   c.addTransform('htmlmin', function (content, outputPath) {
     if (!outputPath.endsWith('.html')) {
       return content;
@@ -63,6 +56,7 @@ export default (c) => {
     ).toSorted((a, b) => b[0] - a[0]);
   });
 
+  c.addPassthroughCopy('style.css');
   c.addPassthroughCopy({ passthrough: '.' });
   c.addPassthroughCopy({ 'passthrough/img': 'img' });
   c.addWatchTarget('passthrough');

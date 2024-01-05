@@ -25,12 +25,7 @@
 <meta property="og:image:alt" content="{{ banner_image.alt }}">
 {% endif %}
 
-{% capture main_css %}
-{% render "main.scss" %}
-{% endcapture %}
-<style type="text/css">
-{{ main_css | css }}
-</style>
+<link rel="stylesheet" href="/style.css">
 
 <link
 rel="alternate"
