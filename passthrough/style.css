@@ -268,8 +268,12 @@ video {
 
 .image-container {
   text-align: center;
-  background-color: var(--fg-color);
-  padding: 0.25em;
+}
+
+.image-container img {
+  border: 8px solid var(--fg-color);
+}
+
 }
 
 .image-container a.image {
